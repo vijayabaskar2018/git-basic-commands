@@ -19,12 +19,19 @@ usr/local/etc/gitconfig -> System(git installation)
 Git Config Commands
 --------------------
 git config --local user.name "test"
+
 git config --local user.name "test"
+
 git config --local user.name "test"	
+
 git config --list --show-origin -> show all config values and the file where they are defined
+
 git config user.name  -> show the current user.name config value
+
 git config -- global --unset user.name  -> Remove a specific setting for a specific level of config
+
 git config -- global --edit  -> Edit a specific level of config directly
+
 git config -- global --remove-section user  -> remove a section of config for a specific level
 
 Git Hooks
