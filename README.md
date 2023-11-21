@@ -9,6 +9,7 @@ Configurations found in three levels:
 - Repository (local)
 - User account (global)
 - Git installation (System)
+
 configuration values are evaluated from the repository up
 
 Path of the respositories:
