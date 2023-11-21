@@ -12,9 +12,9 @@ Configurations found in three levels:
 configuration values are evaluated from the repository up
 
 Path of the respositories:
-repository/.git/config -> Local(repository)
-User/vijay/.gitconfig -> Global (user directory)
-usr/local/etc/gitconfig -> System(git installation)
+- repository/.git/config -> Local(repository)
+- User/vijay/.gitconfig -> Global (user directory)
+- usr/local/etc/gitconfig -> System(git installation)
 
 Git Config Commands
 --------------------
@@ -37,16 +37,16 @@ git config -- global --remove-section user  -> remove a section of config for a 
 Git Hooks
 ------------
 Server side Git Hooks:
- 1)Pre-Receive
- 2)Update
- 3)Post-receive
+- Pre-Receive
+- Update
+- Post-receive
  
 Server side Git Hooks use cases:
- 1)Enforcing commit message format
- 2)Enforcing user identity information
- 3)Enforcing the signing of tags and/or commits
- 4)Blocking access for specific IP addresses
- 5)Blocking specific file extensions
+ - Enforcing commit message format
+- Enforcing user identity information
+- Enforcing the signing of tags and/or commits
+- Blocking access for specific IP addresses
+- Blocking specific file extensions
 
 Pull request workflow
 -----------------------
@@ -59,68 +59,129 @@ Pull request workflow
 Git Commands
 -------------
 git init
+
 git clone <remote url>
+
 origin - default name for remote server
+
 git remote add <name> <remote url>  -> Provide the name for a remote server
+
 git remote -v  -> list remotes and the URLs
+
 git remote update
+
 git ls-remote  -> list branches on remote 
+
 git add .
+
 git commit -m ""
+
 git commit -am ""git status  -> commit all changes
+
 git commit --amend -> to change/modify the current commit which is not yet pushed
+
 git status or git status -S or git status --short
+
 git log
+
 git log --oneline -> To view the commit details in one line
+
 git log --stat
+
 git log --patch -> To get the detailed differences
+
 git log -1 -> To view the history previous commit details
+
 git log HEAD-5..HEAD^ -> To view the history previous commit within the specified range(difference between ie branch difference)
+
 git log --grep <string> --oneline -> To search/filter the commits based on the search string
+
 git log --graph --decorate --oneline -> show the commit history in graphal view with additional details(--graph=graph like structure, --decorate=positional references like branches& HEAD)
+
 git show <hash> or <branch-name> or <HEAD> or <HEAD>~2 or <HEAD>^^
+
 git blame <filename> -> shows you wher the lines in the file are comming from and when(shows how the commits are connected)
+
 git rm --cached <filename> -> Delete file from index and not from Working area and Git repository
+
 git rm <filename> or git rm -f <filename> -> Delete file from Git repository, index and local file system(working area) with force removal
+
 git mv README.md README -> rename the file from local file system(working area), index nd does not touch Git repository
+
 git branch -> list all the branches
+
 git branch -a -> list both remote-tracking and local branches
- 
+
 git branch new_branch -> creating new branch
-git branch -m <new-branch-name>  -> creating new branch and checkout that newly created branch 
+
+git branch -m <new-branch-name>  -> creating new branch and checkout that newly created branch
+
 git branch -m <current-branch-name> <new-branch-name>  -> rename branch name
-git branch -d <delete-branch-name>  -> delete a branch    
+
+git branch -d <delete-branch-name>  -> delete a branch
+
 git branch -D <delete-branch-name>  -> delete a branch forcefully that contains unmerged commits
 
-git checkout -b <branch-name> -> creating new branch and checkout that newly created branch 
+git checkout -b <branch-name> -> creating new branch and checkout that newly created branch
+
 git checkout <branch-name> (checkout the specified branch)
+
 git checkout --track <branch-name> -> set up a local branch to track the remote branch
+
 git stash
+
 git stash list
+
 git stash show
+
 git diff
+
 git diff --cached  (git commit)
+
 git diff -w  -> with white sace changes 
+
 git diff HEAD     (git commit -a)
+
 git diff <commit>
+
 git diff --cached <commit>
+
 git diff <commit> <commit>
+
 git diff feature main
+
 git diff feature... main
+
 git diff feature main file.txt
+
 git merge new_branch
+
 git merge abort
+
 git reset HEAD ->moves the current branch to the HEAD(ie current commit)
+
 git reset --soft <commit> -> moves the current branch and skip copies data from currenct commit in repository to both index and local file system(working area)
+
 git reset or git reset --mixed <commit> -> moves the current branch, copies data from currenct commit in repository to index
+
 git reset --hard <commit> -> moves the current branch, copies data from currenct commit in repository to both index and local file system(working area)
+
 git fetch
+
 git fetch origin <branch-name> -> fetch the feature branch from remote to local
+
 git push or git push origin master -> Push the feature branch to remote
+
 git push -u origin feature4  -> Push the feature branch to remote and set origin as the upstream branch
+
 git pull 
+
 git switch <branch-name> (if it does not work, then use git checkout)
+
 git rebase
+
 git rebase --interactive
+
 git reflog <branch-name> -> shows the operation logs captured from local history
+
 git revert
