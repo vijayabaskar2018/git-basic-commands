@@ -21,9 +21,7 @@ Git Config Commands
 --------------------
 git config --local user.name "test"
 
-git config --local user.name "test"
-
-git config --local user.name "test"	
+git config --local user.email "test@test.com"
 
 git config --list --show-origin -> show all config values and the file where they are defined
 
@@ -77,7 +75,7 @@ git add .
 
 git commit -m ""
 
-git commit -am ""git status  -> commit all changes
+git commit -am "" -> commit all changes
 
 git commit --amend -> to change/modify the current commit which is not yet pushed
 
