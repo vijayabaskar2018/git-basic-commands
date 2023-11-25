@@ -23,6 +23,8 @@ git config --local user.name "test"
 
 git config --local user.email "test@test.com"
 
+git config --global credential.helper wincred
+
 git config --list --show-origin -> show all config values and the file where they are defined
 
 git config user.name  -> show the current user.name config value
@@ -109,11 +111,9 @@ git rm <filename> or git rm -f <filename> -> Delete file from Git repository, in
 
 git mv README.md README -> rename the file from local file system(working area), index nd does not touch Git repository
 
-git branch -> list all the branches
+git branch -l(--list)  -> list branch names(local)
 
-git branch -b -> display the remote branches connected to a local repository
-
-git branch -a -> list both remote-tracking and local branches
+git branch -a(--all) -> list both remote-tracking and local branches
 
 git branch new_branch -> creating new branch
 
