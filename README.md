@@ -71,6 +71,8 @@ git remote update
 
 git ls-remote  -> list branches on remote 
 
+git show-ref -> to view what refs you have in local
+
 git add .
 
 git commit -m ""
@@ -108,6 +110,8 @@ git rm <filename> or git rm -f <filename> -> Delete file from Git repository, in
 git mv README.md README -> rename the file from local file system(working area), index nd does not touch Git repository
 
 git branch -> list all the branches
+
+git branch -b -> display the remote branches connected to a local repository
 
 git branch -a -> list both remote-tracking and local branches
 
