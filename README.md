@@ -125,7 +125,11 @@ git log --grep <string> --oneline -> To search/filter the commits based on the s
 
 git log --graph --decorate --oneline -> show the commit history in graphal view with additional details(--graph=graph like structure, --decorate=positional references like branches& HEAD)
 
-git show <hash> or <branch-name> or <HEAD> or <HEAD>~2 or <HEAD>^^
+git show <hash>
+
+git show <branch-name>
+
+git show <HEAD> or <HEAD>~2 or <HEAD>^^
 
 git blame <filename> -> shows you wher the lines in the file are comming from and when(shows how the commits are connected)
 
