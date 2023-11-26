@@ -75,15 +75,39 @@ git ls-remote  -> list branches on remote
 
 git show-ref -> to view what refs you have in local
 
-git add .
+git add . -> add unstaged changes to staged area
 
-git commit -m ""
+git commit -m "" -> commit staged changes to local repository
 
-git commit -am "" -> commit all changes
+git commit -a -m "" -> commit all changes(both unstaged and staged changes) to local repository
 
 git commit --amend -> to change/modify the current commit which is not yet pushed
 
-git status or git status -S or git status --short
+git status [--long(default)]
+
+git status -s(--short)
+
+git diff
+
+git diff --staged  (git add .)
+
+git diff --cached  (git commit)
+
+git diff -w  -> with white sace changes 
+
+git diff HEAD     (git commit -a)
+
+git diff <commit>
+
+git diff --cached <commit>
+
+git diff <commit> <commit>
+
+git diff feature main
+
+git diff feature... main
+
+git diff feature main file.txt
 
 git log
 
@@ -136,26 +160,6 @@ git stash
 git stash list
 
 git stash show
-
-git diff
-
-git diff --cached  (git commit)
-
-git diff -w  -> with white sace changes 
-
-git diff HEAD     (git commit -a)
-
-git diff <commit>
-
-git diff --cached <commit>
-
-git diff <commit> <commit>
-
-git diff feature main
-
-git diff feature... main
-
-git diff feature main file.txt
 
 git merge new_branch
 
