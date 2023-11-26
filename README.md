@@ -135,11 +135,13 @@ git rm <filename> or git rm -f <filename> -> Delete file from Git repository, in
 
 git mv README.md README -> rename the file from local file system(working area), index nd does not touch Git repository
 
+git restore [--staged] [--worktree] <filename> -> revert file changes availe in stage/index(--staged) or working/local file system(--worktree) area
+
 git branch -l(--list)  -> list branch names(local)
 
 git branch -a(--all) -> list both remote-tracking and local branches
 
-git branch new_branch -> creating new branch
+git branch <new_branch_name> -> creating new branch
 
 git branch -m <new-branch-name>  -> creating new branch and checkout that newly created branch
 
@@ -149,7 +151,7 @@ git branch -d <delete-branch-name>  -> delete a branch
 
 git branch -D <delete-branch-name>  -> delete a branch forcefully that contains unmerged commits
 
-git checkout -b <branch-name> -> creating new branch and checkout that newly created branch
+git checkout -b <new-branch-name> -> creating new branch and checkout that newly created branch
 
 git checkout <branch-name> (checkout the specified branch)
 
@@ -161,17 +163,15 @@ git stash list
 
 git stash show
 
-git merge new_branch
+git merge <new_branch>
 
 git merge abort
 
-git reset HEAD ->moves the current branch to the HEAD(ie current commit)
+git reset --soft <HEAD^ or commit> -> moves the current branch and skip copies data from currenct commit in repository to both index and local file system(working area)
 
-git reset --soft <commit> -> moves the current branch and skip copies data from currenct commit in repository to both index and local file system(working area)
+git reset or git reset --mixed <HEAD^ or commit> -> moves the current branch, copies data from currenct commit in repository to index
 
-git reset or git reset --mixed <commit> -> moves the current branch, copies data from currenct commit in repository to index
-
-git reset --hard <commit> -> moves the current branch, copies data from currenct commit in repository to both index and local file system(working area)
+git reset --hard <HEAD^ or commit> -> moves the current branch, copies data from currenct commit in repository to both index and local file system(working area)
 
 git fetch
 
