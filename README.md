@@ -65,7 +65,7 @@ git clone <remote url>
 
 origin - default name for remote server
 
-git remote add <name> <remote url>  -> Provide the name for a remote server
+git remote add <name(origin)> <remote url>  -> Provide the name for a remote server
 
 git remote -v  -> list remotes and the URLs
 
