@@ -89,7 +89,7 @@ git status -s(--short)
 
 git diff
 
-git diff --staged  (git add .)
+git diff --staged [--no-renames]  (git add .)
 
 git diff --cached  (git commit)
 
@@ -113,9 +113,9 @@ git log
 
 git log --oneline -> To view the commit details in one line
 
-git log --stat
+git log --stat ->  To view the history commit details, each commit will be shown in detail(show files that is changed in that particular commit)
 
-git log --patch -> To get the detailed differences
+git log --patch -> To view the history commit details, each commit will be shown in detail(show files as well changes maded in that particular commit)
 
 git log -1 -> To view the history previous commit details
 
